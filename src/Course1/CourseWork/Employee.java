@@ -7,26 +7,15 @@ public class Employee {
     private String employeeFullName;
     private int department;
     private int salary;
-    EmployeeId id = new EmployeeId();
+    private static int id;
+//    EmployeeId id = new EmployeeId();
 
-    public Employee(String employeeFullName, int department, int salary, EmployeeId id) {
+    public Employee(String employeeFullName, int department, int salary) {
         this.employeeFullName = employeeFullName;
         this.department = department;
         this.salary = salary;
-        this.id = id;
+        this.id = 1;
     }
-    public Employee[] employees(String employeeFullName, int department, int salary, EmployeeId id) {
-        this.employeeFullName = employeeFullName;
-        this.department = department;
-        this.salary = salary;
-        this.id = new EmployeeId();
-        return new Employee[0];
-    }
-
-    // метод для рассчета суммы затрат на зарплату в месяц
-
-
-
         public String getEmployeeFullName() {
             return this.employeeFullName;
         }
@@ -66,7 +55,7 @@ public class Employee {
                 "ФИО = " + employeeFullName +
                 ", отдел = " + department +
                 ", зарплата = " + salary +
-                new EmployeeId();
+                ", id = " + (id++);
     }
 
 }
