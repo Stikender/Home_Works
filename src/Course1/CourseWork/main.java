@@ -24,7 +24,6 @@ public class main {
         System.out.println(employeeMetods.printEmployeeMaxSalary(employees));
         System.out.println(employeeMetods.printAverageSalaryMonth(employees));
         System.out.println(employeeMetods.employeeFullName(employees));
-
     }
 }
 
